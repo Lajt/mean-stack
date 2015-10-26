@@ -21,6 +21,8 @@ mongoose.connect('mongodb://localhost:27017/lajtapp', function(err){
 	console.log('DB connected successfully.');
 });
 
+app.use(express.static('client'));
+
 
 app.use(function(req, res, next){
 	res.setHeader('Access-Control-Allow-Origin', '*');
