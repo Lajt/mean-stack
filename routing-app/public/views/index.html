@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Routing App</title>
+	
+	<!-- set the base path for angular routing 
+		thanks to it angular know what is home page
+		and can make URLS pretty ($locationProvider)-->
+	<base href="/">
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	
+	<!-- JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/app-routes.js"></script>
+	
+</head>
+<body ng-app="routerApp" ng-controller="mainController as main">
+	
+	<body class="container">
+		<header>
+			<nav class="navbar navbar-default">
+				<div class="navbar-header">
+					<a href="/" class="navbar-brand">Angular Routing Example</a>
+				</div>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="/"><i class="fa fa-home"></i> Home</a></li>
+					<li><a href="/about"><i class="fa fa-shield"></i> About</a></li>
+					<li><a href="/contact"><i class="fa fa-comment"></i> Contact</a></li>
+				</ul>
+			</nav>
+		</header>
+		
+		<!-- MAIN CONTENT AND INJECTED VIEWS -->
+		<main>
+			
+			<div ng-view></div>
+			<!-- angular templating will go here -->
+			<!-- this is where content will be injected -->
+		</main>
+		
+	</body>
+	
+</body>
+</html>
