@@ -1,3 +1,25 @@
 body{
 	padding-top: 50px;
+	overflow: hidden;
+}
+
+#content-views{
+	position: relative;
+}
+
+.ng-enter, .ng-leave{
+	width: 100%;
+	position: absolute;
+}
+
+.ng-enter{
+	-webkit-animation:lightSpeedIn 1.2s both ease-in;
+	-moz-animation:lightSpeedIn 1.2s both ease-in;
+	animation:lightSpeedIn 1.2s both ease-in;
+}
+
+.ng-leave{
+	-webkit-animation:rotateOutDownRight 0.5s both ease-in;
+	-moz-animation:rotateOutDownRight 0.5s both ease-in;
+	animation:rotateOutDownRight 0.5s both ease-in;
 }
