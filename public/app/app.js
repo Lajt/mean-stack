@@ -1,5 +1,5 @@
 // inject stuff service
-angular.module('myApp', ['stuffService'])
+angular.module('myApp', ['userService'])
 
 	// inject stuff factory
 	.controller('userController', function(Stuff){
