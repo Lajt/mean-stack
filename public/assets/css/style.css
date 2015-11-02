@@ -26,3 +26,9 @@ header .navbar {
 	from { transform: rotate(0deg); }
 	to { transform: rotate(360deg); }
 }
+
+.show-hide-message.ng-hide-remove{
+	animation:zoomIn 0.3s both ease;
+	-moz-animation:zoomIn 0.3s both ease;
+	-webkit-animation:zoomIn 0.3s both ease;
+}
