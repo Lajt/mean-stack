@@ -1,10 +1,11 @@
-// inject stuff service
-angular.module('myApp', ['userService'])
-
-	// inject stuff factory
-	.controller('userController', function(Stuff){
-		var vm = this;
-		
-		
-	});
-	
+angular.module('userApp', [
+	'ngAnimate',
+	'appRoutes',
+	'authService',
+	'mainCtrl',
+	'userCtrl',
+	'userService'
+])
+.config(function($httpProvider){
+	$httpProvider.interceptors.push('AuthInterceptor');
+});

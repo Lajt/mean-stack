@@ -44,12 +44,13 @@ angular.module('authService', [])
 			}
 		};
 		
-		authFactory.getUser = function(){
-			if(AuthToken.getToken()){
+		// get the logged in user
+		authFactory.getUser = function() {
+			if (authFactory.isLoggedIn){ // not sure if that's a way to do it
 				return $http.get('/api/me');
 			}
 			else{
-				return $q.reject({ message: 'User has no token.' });
+				return $q.reject({ message: 'User has no token.' });    
 			}
 		};
 		

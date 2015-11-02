@@ -19,10 +19,13 @@ mongoose.connect(config.database, function(err){
 	console.log('DB connected successfully.');
 });
 
+
+
 app.use(function(req, res, next){
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	res.setHeader('Access-Control-Allow-Methods', 'GET, POST');
 	res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type, \ Authorization');
+	res.setHeader('X-Powered-By', 'LajtCore');
 	next();
 });
 
@@ -33,7 +36,7 @@ app.use(express.static('public'));
 /*app.get('/', function(req,res){
 	res.send('Hello World!');
 });*/
-app.get('*', function(req,res){
+app.get('/', function(req,res){
 	res.sendFile(path.join(__dirname+'/public/app/views/index.html'));
 });
 

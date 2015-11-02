@@ -43,7 +43,7 @@ module.exports = function(app, express){
 	apiRouter.use(function(req,res,next){
 		
 		var token = req.body.token || req.query['token'] || req.headers['x-access-token'];
-		
+		console.log(token);
 		if(token){
 			jwt.verify(token, config.secret, function(err, decode){
 				if(err){
